@@ -20,10 +20,13 @@ from SpeechHelpers import build_speechlet_response, build_response
 from RiskLogic import battle_handler, battle_probability_handler
 from DiceLogic import roll_dice_handler
 
-#from WordHelper import word_value_handler, word_checker_handler, word_spell_handle
-
 # Code version number: (so it can be accessed from other files easily)
 VERSION = "A"
+
+# dictionary that maps intent strings to functions
+# (This is primarily as an ease of use thing)
+# update this once new intents are added
+intents_to_handlers = ["test": "filler"]
 
 # Event Handler Methods
 def get_welcome_response():
@@ -121,7 +124,7 @@ def lambda_handler(event, context):
 
     # Application ID added to prevent calls
     if (event['session']['application']['applicationId'] !=
-             "ID here"):
+             "amzn1.ask.skill.d2f89055-bebd-4312-adeb-15fa95ef600f"):
          raise ValueError("Invalid Application ID")
 
     if event['session']['new']:
