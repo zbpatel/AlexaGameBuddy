@@ -12,3 +12,7 @@ Any of the games that this app provides help for are the properties of their
 respective owners. I enjoy playing all of the games this app supports, and I
 wanted to make a tool that might be fun for other people who enjoy them as much
 as I do.
+
+In addition, part of this rebuild was to move the skill onto the new interaction
+model in the hopes of increasing the usability of the skill (and maybe fixing
+that old issue with the number 2)
